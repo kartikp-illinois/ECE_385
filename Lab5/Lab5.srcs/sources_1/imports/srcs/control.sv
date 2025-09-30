@@ -49,8 +49,6 @@ module control (
 	output logic		mem_mem_ena, // Mem Operation Enable
 	output logic		mem_wr_ena  // Mem Write Enable
 );
-    //assign ben = 1'b0;
-
 	enum logic [4:0] {
 		halted, 
 		pause_ir1,
