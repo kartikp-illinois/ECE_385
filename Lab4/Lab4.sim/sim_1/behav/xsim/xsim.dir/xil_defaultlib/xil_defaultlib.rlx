@@ -1,0 +1,14 @@
+0.7
+2020.2
+Oct 14 2022
+05:20:55
+C:/Users/karti/Documents/ECE_385/Lab4/Lab4.sim/sim_1/behav/xsim/glbl.v,1665704903,verilog,,,,glbl,,uvm,,,,,,
+C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sim_1/new/tb.sv,1758774760,systemVerilog,,,,tb,,uvm,,,,,,
+C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/imports/design_source/four_bit_ripple.sv,1758252922,systemVerilog,,C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/imports/design_source/full_adder.sv,,four_bit_ripple,,uvm,,,,,,
+C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/imports/design_source/full_adder.sv,1758252922,systemVerilog,,C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/imports/design_source/hex_driver.sv,,full_adder,,uvm,,,,,,
+C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/imports/design_source/hex_driver.sv,1757997351,systemVerilog,,C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/imports/design_source/negedge_detector.sv,,hex_driver,,uvm,,,,,,
+C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/imports/design_source/negedge_detector.sv,1757997351,systemVerilog,,C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/imports/design_source/ripple_adder.sv,,negedge_detector,,uvm,,,,,,
+C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/imports/design_source/ripple_adder.sv,1758253843,systemVerilog,,C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/imports/design_source/sync_debounce.sv,,ripple_adder,,uvm,,,,,,
+C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/imports/design_source/sync_debounce.sv,1758772928,systemVerilog,,C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/new/multiplier_top.sv,,sync_debounce,,uvm,,,,,,
+C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/new/addsub9.sv,1758770643,systemVerilog,C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/imports/design_source/four_bit_ripple.sv;C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/imports/design_source/full_adder.sv;C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/imports/design_source/hex_driver.sv;C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/imports/design_source/negedge_detector.sv;C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/imports/design_source/ripple_adder.sv;C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/imports/design_source/sync_debounce.sv;C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/new/multiplier_top.sv,C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/imports/design_source/four_bit_ripple.sv,,$unit_addsub9_sv_3014779109;addsub9,,uvm,,,,,,
+C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/new/multiplier_top.sv,1758776902,systemVerilog,,C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/imports/design_source/negedge_detector.sv,,multiplier_top,,uvm,,,,,,

@@ -1,0 +1,443 @@
+
+*** Running vivado
+    with args -log multiplier_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source multiplier_top.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source multiplier_top.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/utils_1/imports/synth_1/multiplier_top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/utils_1/imports/synth_1/multiplier_top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top multiplier_top -part xc7s50csga324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 27580
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1200.762 ; gain = 409.660
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'multiplier_top' [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/new/multiplier_top.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'sync_debounce' [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/imports/design_source/sync_debounce.sv:12]
+INFO: [Synth 8-6155] done synthesizing module 'sync_debounce' (0#1) [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/imports/design_source/sync_debounce.sv:12]
+INFO: [Synth 8-6157] synthesizing module 'negedge_detector' [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/imports/design_source/negedge_detector.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'negedge_detector' (0#1) [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/imports/design_source/negedge_detector.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'addsub9' [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/new/addsub9.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'ripple_adder' [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/imports/design_source/ripple_adder.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'four_bit_ripple' [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/imports/design_source/four_bit_ripple.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'full_adder' [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/imports/design_source/full_adder.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'full_adder' (0#1) [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/imports/design_source/full_adder.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'four_bit_ripple' (0#1) [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/imports/design_source/four_bit_ripple.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'ripple_adder' (0#1) [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/imports/design_source/ripple_adder.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'addsub9' (0#1) [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/new/addsub9.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'hex_driver' [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/imports/design_source/hex_driver.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/imports/design_source/hex_driver.sv:11]
+INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/imports/design_source/hex_driver.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/imports/design_source/hex_driver.sv:11]
+INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/imports/design_source/hex_driver.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/imports/design_source/hex_driver.sv:11]
+INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/imports/design_source/hex_driver.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/imports/design_source/hex_driver.sv:11]
+INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/imports/design_source/hex_driver.sv:11]
+INFO: [Synth 8-6155] done synthesizing module 'hex_driver' (0#1) [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/imports/design_source/hex_driver.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'multiplier_top' (0#1) [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/sources_1/new/multiplier_top.sv:23]
+WARNING: [Synth 8-7129] Port sw_i[15] in module multiplier_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw_i[14] in module multiplier_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw_i[13] in module multiplier_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw_i[12] in module multiplier_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw_i[11] in module multiplier_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw_i[10] in module multiplier_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw_i[9] in module multiplier_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw_i[8] in module multiplier_top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1290.930 ; gain = 499.828
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1290.930 ; gain = 499.828
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1290.930 ; gain = 499.828
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1290.930 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc]
+WARNING: [Vivado 12-584] No ports matched 'run_i'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:28]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:28]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'reset'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'reset'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:32]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:32]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'run_i'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sign_led'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sign_led'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_grid_a[3]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_grid_a[2]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_grid_a[1]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:44]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_grid_a[0]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:45]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_grid_b[3]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:46]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:46]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_grid_b[2]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:47]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:47]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_grid_b[1]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:48]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:48]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_grid_b[0]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:49]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:49]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_a[7]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:50]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:50]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_a[6]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:51]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:51]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_a[5]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:52]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:52]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_a[4]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:53]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:53]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_a[3]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_a[2]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:55]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:55]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_a[1]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:56]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:56]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_a[0]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:57]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:57]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_b[7]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:58]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:58]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_b[6]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:59]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:59]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_b[5]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:60]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:60]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_b[4]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:61]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:61]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_b[3]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:62]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:62]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_b[2]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:63]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:63]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_b[1]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:64]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:64]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_b[0]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:65]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:65]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_grid_a[0]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:66]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:66]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_grid_a[1]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:67]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:67]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_grid_a[2]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:68]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:68]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_grid_a[3]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:69]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:69]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_a[0]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:70]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:70]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_a[1]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:71]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:71]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_a[2]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:72]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:72]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_a[3]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:73]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:73]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_a[4]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:74]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:74]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_a[5]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:75]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:75]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_a[6]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:76]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:76]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_a[7]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:77]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:77]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_b[0]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:78]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:78]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_b[1]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:79]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:79]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_b[2]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:80]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:80]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_b[3]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:81]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:81]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_b[4]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:82]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:82]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_b[5]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:83]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:83]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_b[6]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:84]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:84]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_seg_b[7]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:85]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:85]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_grid_b[0]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:86]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:86]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_grid_b[1]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:87]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:87]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_grid_b[2]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:88]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:88]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_grid_b[3]'. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:89]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc:89]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/karti/Documents/ECE_385/Lab4/Lab4.srcs/constrs_1/imports/pin_assignment/top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/multiplier_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/multiplier_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1351.059 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1351.059 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1351.059 ; gain = 559.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s50csga324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1351.059 ; gain = 559.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1351.059 ; gain = 559.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1351.059 ; gain = 559.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      9 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 34    
++---Registers : 
+	               17 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input   17 Bit        Muxes := 2     
+	   4 Input   17 Bit        Muxes := 2     
+	   2 Input    9 Bit        Muxes := 2     
+	   4 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 3     
+	   5 Input    5 Bit        Muxes := 1     
+	   6 Input    5 Bit        Muxes := 1     
+	   5 Input    4 Bit        Muxes := 1     
+	   8 Input    4 Bit        Muxes := 1     
+	   9 Input    3 Bit        Muxes := 1     
+	   6 Input    3 Bit        Muxes := 1     
+	   6 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design multiplier_top has port hex_seg[7] driven by constant 1
+WARNING: [Synth 8-7129] Port sw_i[15] in module multiplier_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw_i[14] in module multiplier_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw_i[13] in module multiplier_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw_i[12] in module multiplier_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw_i[11] in module multiplier_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw_i[10] in module multiplier_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw_i[9] in module multiplier_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sw_i[8] in module multiplier_top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1351.059 ; gain = 559.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1351.059 ; gain = 559.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1351.059 ; gain = 559.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1351.059 ; gain = 559.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1351.059 ; gain = 559.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1351.059 ; gain = 559.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1351.059 ; gain = 559.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1351.059 ; gain = 559.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1351.059 ; gain = 559.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1351.059 ; gain = 559.957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    13|
+|3     |LUT1   |     7|
+|4     |LUT2   |     4|
+|5     |LUT3   |    15|
+|6     |LUT4   |    25|
+|7     |LUT5   |    22|
+|8     |LUT6   |    30|
+|9     |FDRE   |    81|
+|10    |IBUF   |    11|
+|11    |OBUF   |    29|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1351.059 ; gain = 559.957
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 10 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 1351.059 ; gain = 499.828
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1351.059 ; gain = 559.957
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1351.059 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1351.059 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 3ae12656
+INFO: [Common 17-83] Releasing license: Synthesis
+47 Infos, 72 Warnings, 54 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1351.059 ; gain = 931.918
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'C:/Users/karti/Documents/ECE_385/Lab4/Lab4.runs/synth_1/multiplier_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file multiplier_top_utilization_synth.rpt -pb multiplier_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 25 00:32:24 2025...

@@ -3,7 +3,7 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 09/15/2025 11:56:09 PM
+// Create Date: 09/16/2025 04:52:46 AM
 // Design Name: 
 // Module Name: full_adder
 // Project Name: 
@@ -21,12 +21,14 @@
 
 
 module full_adder(
-    input logic A,
-    input logic B,
-    input logic Cin,
-    output logic Cout,
-    output logic Sum
+    input a,
+    input b,
+    input cin,
+    output s,
+    output cout
     );
-    assign Sum  = A ^ B ^ Cin;
-    assign Cout = (A & B) | (B & Cin) | (A & Cin);
+    
+    assign s = a^b^cin;
+    assign cout = a&b|cin&(a^b);
+    
 endmodule

@@ -1,0 +1,20 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../Lab5.srcs/sources_1/imports/srcs/control.sv" \
+"../../../../Lab5.srcs/sources_1/imports/srcs/cpu.sv" \
+"../../../../Lab5.srcs/sources_1/imports/srcs/cpu_to_io.sv" \
+"../../../../Lab5.srcs/sources_1/imports/srcs/hex_driver.sv" \
+"../../../../Lab5.srcs/sources_1/imports/srcs/instantiate_ram.sv" \
+"../../../../Lab5.srcs/sources_1/imports/srcs/load_reg.sv" \
+"../../../../Lab5.srcs/sources_1/imports/srcs/memory.sv" \
+"../../../../Lab5.srcs/sources_1/imports/srcs/processor_top.sv" \
+"../../../../Lab5.srcs/sources_1/imports/srcs/slc3.sv" \
+"../../../../Lab5.srcs/sources_1/imports/srcs/sync.sv" \
+"../../../../Lab5.srcs/sources_1/imports/srcs/test_memory.sv" \
+"../../../../Lab5.srcs/sim_1/new/processor_top_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

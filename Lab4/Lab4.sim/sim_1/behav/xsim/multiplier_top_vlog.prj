@@ -1,0 +1,16 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../Lab4.srcs/sources_1/new/addsub9.sv" \
+"../../../../Lab4.srcs/sources_1/imports/design_source/four_bit_ripple.sv" \
+"../../../../Lab4.srcs/sources_1/imports/design_source/full_adder.sv" \
+"../../../../Lab4.srcs/sources_1/imports/design_source/hex_driver.sv" \
+"../../../../Lab4.srcs/sources_1/imports/design_source/negedge_detector.sv" \
+"../../../../Lab4.srcs/sources_1/imports/design_source/ripple_adder.sv" \
+"../../../../Lab4.srcs/sources_1/imports/design_source/sync_debounce.sv" \
+"../../../../Lab4.srcs/sources_1/new/multiplier_top.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
