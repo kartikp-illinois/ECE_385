@@ -82,6 +82,7 @@ module control (
 		s_22,
 
 		s_12,	//jmp
+		//s_12_1, //special
 
 		s_04,	//jsr
 		s_21,
@@ -330,7 +331,7 @@ module control (
 						4'b0110 : state_nxt = s_06;//ldr
 						4'b0111 : state_nxt = s_07;//str
 						4'b1101 : state_nxt = pause_ir1;//pause
-						default : state_nxt = pause_ir1;//unknown
+						default : state_nxt = pause_ir2;//unknown
 					endcase
 				end
 			s_01 : state_nxt = s_18;
@@ -352,6 +353,7 @@ module control (
 			s_04 : state_nxt = s_21;
 			s_21 : state_nxt = s_18;
 
+			//s_12 : state_nxt = s_12_1;
 			s_12 : state_nxt = s_18;
 
 			s_00 : state_nxt = (nzp & ir[11:9]) ? s_22 : s_18;

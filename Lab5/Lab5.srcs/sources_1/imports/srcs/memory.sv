@@ -13,7 +13,7 @@ module memory (
 );
 
 
-`ifdef SYNTHESIS
+//`ifdef SYNTHESIS
 
     logic [9:0]  init_addr;
     logic [15:0] init_data;
@@ -60,20 +60,20 @@ module memory (
 
     assign readout = sram_douta;
 
-`else
+//`else
 
-    test_memory test_mem_subsystem (
-        .clk		(clk), 
-        .reset		(reset), 
+//    test_memory test_mem_subsystem (
+//        .clk		(clk), 
+//        .reset		(reset), 
 
-        .data		(data), 
-        .address	(address), 
-        .ena		(ena), 
-        .wren		(wren), 
-        .readout	(readout)
-    );
+//        .data		(data), 
+//        .address	(address), 
+//        .ena		(ena), 
+//        .wren		(wren), 
+//        .readout	(readout)
+//    );
 
-`endif
+//`endif
 
 
 endmodule

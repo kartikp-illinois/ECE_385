@@ -137,8 +137,8 @@ control control_inst (
 	.mem_wr_ena(mem_wr_ena)
 );
 /////////////
-assign led_o = ir_d;
-assign hex_display_debug = control_inst.state;
+//assign led_o = ir_d;
+assign hex_display_debug = ir_d;
 ////////////////
 
 //bus instantiation
