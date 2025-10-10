@@ -402,7 +402,7 @@ module controlCodes(
             nzp <= 3'b000;
         end else begin
             if (ld) begin
-                nzp <= {bus[15], bus==16'd0, !bus[15]};
+                nzp <= {bus[15], bus==16'd0, (!bus[15] && bus!=16'd0)};
             end
         end
     end

@@ -12,6 +12,13 @@ module processor_top_tb();
     logic [3:0] hex_grid_left;
     logic [7:0] hex_seg_right;
     logic [3:0] hex_grid_right;
+    
+    wire [15:0] mar, mdr, pc, ir;
+    assign mar = dut.slc3.cpu.ld_mar;
+    assign mdr = dut.slc3.cpu.mdr;
+    assign pc = dut.slc3.cpu.pc;
+    assign ir = dut.slc3.cpu.ir;
+    
 
     // Instantiate the processor
     processor_top dut (
@@ -50,7 +57,7 @@ module processor_top_tb();
     // Monitor PC loading into MAR
     always @(posedge clk) begin
         if (dut.slc3.cpu.ld_mar && dut.slc3.cpu.cpu_control.state == 3) begin // s_18 = 3
-            $display("Time=%0t | [PASS] DEMO POINT 1a: PC (0x%04h) loading into MAR", 
+            $display("Time=%0t | [PASsssS] DEMO POINT 1a: PC (0x%04h) loading into MAR", 
                      $time, dut.slc3.cpu.pc);
         end
     end
@@ -59,7 +66,7 @@ module processor_top_tb();
     logic [15:0] prev_pc;
     always @(posedge clk) begin
         if (dut.slc3.cpu.ld_pc && dut.slc3.cpu.pc != prev_pc) begin
-            $display("Time=%0t | [PASS] DEMO POINT 1b: PC incremented from 0x%04h to 0x%04h", 
+            $display("Time=%0t | [PASssssS] DEMO POINT 1b: PC incremented from 0x%04h to 0x%04h", 
                      $time, prev_pc, dut.slc3.cpu.pc_next);
         end
         prev_pc = dut.slc3.cpu.pc;
@@ -76,7 +83,7 @@ module processor_top_tb();
     // Monitor IR loading from MDR
     always @(posedge clk) begin
         if (dut.slc3.cpu.ld_ir && dut.slc3.cpu.cpu_control.state == 7) begin // s_35 = 7
-            $display("Time=%0t | [PASS] DEMO POINT 2: MDR (0x%04h) loading into IR", 
+            $display("Time=%0t | [PASssS] DEMO POINT 2: MDR (0x%04h) loading into IR", 
                      $time, dut.slc3.cpu.mdr);
             $display("                   Instruction fetched: 0x%04h", dut.slc3.cpu.ir);
             decode_instruction(dut.slc3.cpu.mdr);
