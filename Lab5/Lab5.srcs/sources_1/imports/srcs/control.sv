@@ -86,12 +86,14 @@ module control (
 		s_04,	//jsr
 		s_21,
 
-		s_06_1,	//ldr
-		s_06_2,
-		s_06_3,
-		s_06_4,
-		s_06_5,
-		s_25,
+		s_06,	//ldr
+		//s_06_2,
+		//s_06_3,
+		//s_06_4,
+		//s_06_5,
+		s_25_1,
+		s_25_2,
+		s_25_3,
 		s_27,
 
 
@@ -146,25 +148,36 @@ module control (
 		// Assign relevant control signals based on current state
 		case (state)
 			halted: ; 
-			s_18 : 
-				begin 
+			s_18 : begin 
 					gate_pc = 1'b1;
 					ld_mar = 1'b1;
-					pcmux = 2'b00;
+					pcmux = 2'b10;
 					ld_pc = 1'b1;
 				end
-			s_33_1, s_33_2, s_33_3 : //you may have to think about this as well to adapt to ram with wait-states
-				begin
+
+			s_33_1 : begin 
+					mem_mem_ena = 1'b0;
+					ld_mdr = 1'b1;
+					mioen = 1'b1;
+				end
+
+			s_33_2 : begin
 					mem_mem_ena = 1'b1;
 					ld_mdr = 1'b1;
 					mioen = 1'b1;
-
 				end
-			s_35 : 
-				begin 
+
+			s_33_3 : begin//you may have to think about this as well to adapt to ram with wait-states
+					mem_mem_ena = 1'b1;
+					ld_mdr = 1'b1;
+					mioen = 1'b1;
+				end
+
+			s_35 : begin 
 					gate_mdr = 1'b1;
 					ld_ir = 1'b1;
 				end
+
 			pause_ir1 : ld_led = 1'b1; 
 			pause_ir2 : ld_led = 1'b1; 
 
@@ -199,50 +212,44 @@ module control (
 					ld_cc = 1'b1;
 			end
 
-			s_06_1 : begin
+			s_06 : begin
 					ld_mar = 1'b1;
 					addr2mux = 2'b10;
+					addr1mux = 1'b1;
 					sr1mux = 1'b1;
 					gate_marmux = 1'b1;
 			end
 
-			s_06_2 : begin
-					mem_mem_ena = 1'b1;
-			end
-
-			s_06_3 : begin
-					mem_mem_ena = 1'b1;
-			end
-
-			s_06_4 : begin
-					mem_mem_ena = 1'b1;
-			end
-
-			s_06_5 : begin
-					mem_mem_ena = 1'b1;
-			end
-
-			s_25 : begin
+			s_25_1 : begin
 					ld_mdr = 1'b1;
 					mioen = 1'b1;
+					mem_mem_ena = 1'b0;
+			end
+
+			s_25_2, s_25_3 : begin
+					ld_mdr = 1'b1;
+					mioen = 1'b1;
+					mem_mem_ena = 1'b1;
 			end
 
 			s_27 : begin
 					ld_reg = 1'b1;
 					gate_mdr = 1'b1;
+					drmux = 1'b0;
 					ld_cc = 1'b1;
 			end
 
 			s_07 : begin
 					ld_mar = 1'b1;
 					addr2mux = 2'b10;
+					addr1mux = 1'b1;
 					sr1mux = 1'b1;
 					gate_marmux = 1'b1;
 			end
 
 			s_23 : begin
 					ld_mdr = 1'b1;
-					sr1mux = 1'b1;
+					sr1mux = 1'b0;
 					aluk = 2'b11;//PASSA;
 					gate_alu = 1'b1;
 			end
@@ -266,8 +273,9 @@ module control (
 			s_12 : begin
 					ld_pc = 1'b1;
 					sr1mux = 1'b1;
-					sr2mux = 2'b11;
-					pcmux = 2'b01;
+					aluk = 2'b11;
+					gate_alu = 1'b1;
+					pcmux = 2'b00;
 			end
 
 			s_04 : begin
@@ -319,7 +327,7 @@ module control (
 						4'b0000 : state_nxt = s_00;//br
 						4'b1100 : state_nxt = s_12;//jmp
 						4'b0100 : state_nxt = s_04;//jsr
-						4'b0110 : state_nxt = s_06_1;//ldr
+						4'b0110 : state_nxt = s_06;//ldr
 						4'b0111 : state_nxt = s_07;//str
 						4'b1101 : state_nxt = pause_ir1;//pause
 						default : state_nxt = pause_ir1;//unknown
@@ -328,12 +336,15 @@ module control (
 			s_01 : state_nxt = s_18;
 			s_05 : state_nxt = s_18;
 			s_09 : state_nxt = s_18;
-			s_06_1 : state_nxt = s_06_2;
-			s_06_2 : state_nxt = s_06_3;
-			s_06_3 : state_nxt = s_06_4;
-			s_06_4 : state_nxt = s_06_5;
-			s_06_5 : state_nxt = s_25;
-			s_25 : state_nxt = s_27;
+			// s_06_1 : state_nxt = s_06_2;
+			// s_06_2 : state_nxt = s_06_3;
+			// s_06_3 : state_nxt = s_06_4;
+			// s_06_4 : state_nxt = s_06_5;
+			// s_06_5 : state_nxt = s_25_1;
+			s_06 : state_nxt = s_25_1;
+			s_25_1 : state_nxt = s_25_2;
+			s_25_2 : state_nxt = s_25_3;
+			s_25_3 : state_nxt = s_27;
 			s_07 : state_nxt = s_23;
 			s_23 : state_nxt = s_16;
 			s_16 : state_nxt = s_18;

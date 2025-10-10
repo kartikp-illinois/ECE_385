@@ -138,7 +138,7 @@ control control_inst (
 );
 /////////////
 assign led_o = ir_d;
-assign hex_display_debug = ir_d;
+assign hex_display_debug = control_inst.state;
 ////////////////
 
 //bus instantiation
@@ -455,7 +455,7 @@ module regFile(
     output logic [15:0] sr2
 );
     logic [15:0] rf [8];
-    logic rst_val = 16'hxxxx;
+    logic [15:0] rst_val = 16'hxxxx;
     always_ff @(posedge clk) begin
         if (rst) begin
             rf[0] <= rst_val;

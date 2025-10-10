@@ -13,8 +13,11 @@ module sync_debounce (
 	output logic q
 );
 
-	logic ff1, ff2;
-	logic [COUNTER_WIDTH : 0] counter;
+	logic ff1 = 0, ff2 = 0;
+	logic [COUNTER_WIDTH:0] counter; 
+
+
+
 	
 
 	always_ff @(posedge clk) begin

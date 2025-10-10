@@ -15,6 +15,13 @@ module processor_top (
 	output logic [3:0]  hex_grid_right
 );
 
+logic clk_1hz;
+clock_divider_1hz div (
+    .clk_in(clk),
+    .reset(reset),
+    .clk_out(clk_1hz)
+);
+
 logic reset_s;
 logic run_s;
 logic continue_s;
@@ -43,10 +50,10 @@ sync_flop sw_sync [15:0] (
 
 slc3 slc3 (
 	.clk			(clk), 
-	.reset			(reset_s), 
+	.reset			(reset_s), //s
 
-	.run_i			(run_s), 
-	.continue_i		(continue_s),
+	.run_i			(run_s), //s
+	.continue_i		(continue_s), //s
 	.sw_i			(sw_s),
 
 	.led_o			(led_o),
@@ -64,7 +71,7 @@ slc3 slc3 (
 
 memory mem_subsystem (
 	.clk		(clk), 
-	.reset		(reset_s), 
+	.reset		(reset_s),  //s
 
 	.data		(sram_wdata), 
 	.address	(sram_addr[9:0]), 
@@ -76,3 +83,30 @@ memory mem_subsystem (
 
 endmodule
 
+
+
+module clock_divider_1hz (
+    input  logic clk_in,
+    input  logic reset,
+    output logic clk_out
+);
+
+    localparam N = 26; // 2^26 = 67,108,864 > 50,000,000
+    
+    logic [25:0] counter;
+
+    always_ff @(posedge clk_in or posedge reset) begin
+        if (reset) begin
+            counter <= 0;
+            clk_out <= 0;
+        end else begin
+            if (counter == 49_999_999) begin
+                counter <= 0;
+                clk_out <= ~clk_out;
+            end else begin
+                counter <= counter + 1;
+            end
+        end
+    end
+
+endmodule
