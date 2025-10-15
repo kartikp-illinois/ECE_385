@@ -1,0 +1,21 @@
+18:54:36 **** Incremental Build of configuration Debug for project accumulator_demo ****
+make all 
+'Building file: ../src/accumulator.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/accumulator.o" -IC:/Users/karti/Documents/ECE_385/Vitis/mb_intro_top/export/mb_intro_top/sw/mb_intro_top/standalone_microblaze_0/bspinclude/include -mno-xl-reorder -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/accumulator.d" -MT"src/accumulator.o" -o "src/accumulator.o" "../src/accumulator.c"
+'Finished building: ../src/accumulator.c'
+' '
+'Building target: accumulator_demo.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/karti/Documents/ECE_385/Vitis/mb_intro_top/export/mb_intro_top/sw/mb_intro_top/standalone_microblaze_0/bsplib/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "accumulator_demo.elf"  ./src/accumulator.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: accumulator_demo.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size accumulator_demo.elf  |tee "accumulator_demo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6332	    336	   3108	   9776	   2630	accumulator_demo.elf
+'Finished building: accumulator_demo.elf.size'
+' '
+
+18:54:37 Build Finished (took 1s.312ms)
+

@@ -1,0 +1,6 @@
+18:44:58 **** Build of configuration Debug for project accumulator_demo_system ****
+make all 
+Skipping SD card image generation. Reason: "The system project only has applications for microblaze processors."
+
+18:44:58 Build Finished (took 281ms)
+

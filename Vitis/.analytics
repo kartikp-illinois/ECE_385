@@ -1,0 +1,27 @@
+timestamp=[2025-10-15 15:49:53], mode=WORKBENCH_START, duration=0:00:05.931, duration_ms=5931, data={}
+timestamp=[2025-10-15 15:49:54], mode=WORKBENCH_UI_INIT, duration=0:00:00.334, duration_ms=334, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2025-10-15 15:49:55], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:01.021, duration_ms=1021, data={}
+timestamp=[2025-10-15 15:50:50], mode=APP_CREATION, duration=0:00:08.055, duration_ms=8055, data={name=accumulator_demo, project_type=sdk, os=standalone, processor=microblaze, runtime=cpp, platform=mb_intro_top, application_type=application}
+timestamp=[2025-10-15 15:51:48], mode=PLATFORM_GENERATION, duration=0:00:06.816, duration_ms=6816, data={name=mb_intro_top}
+timestamp=[2025-10-15 15:51:52], mode=BUILD, duration=0:00:03.383, duration_ms=3383, data={name=accumulator_demo, configuration=Debug, clean_build=false}
+timestamp=[2025-10-15 15:53:31], mode=BUILD, duration=0:00:01.034, duration_ms=1034, data={name=accumulator_demo, configuration=Debug, clean_build=false}
+timestamp=[2025-10-15 17:54:03], mode=PLATFORM_GENERATION, duration=0:00:02.967, duration_ms=2967, data={name=mb_intro_top}
+timestamp=[2025-10-15 17:54:03], mode=BUILD, duration=0:00:00.177, duration_ms=177, data={name=accumulator_demo, configuration=Debug, clean_build=true}
+timestamp=[2025-10-15 17:54:24], mode=PLATFORM_GENERATION, duration=0:00:05.908, duration_ms=5908, data={name=mb_intro_top}
+timestamp=[2025-10-15 17:54:26], mode=BUILD, duration=0:00:01.766, duration_ms=1766, data={name=accumulator_demo, configuration=Debug, clean_build=false}
+timestamp=[2025-10-15 18:05:23], mode=PLATFORM_GENERATION, duration=0:00:02.850, duration_ms=2850, data={name=mb_intro_top}
+timestamp=[2025-10-15 18:05:23], mode=BUILD, duration=0:00:00.154, duration_ms=154, data={name=accumulator_demo, configuration=Debug, clean_build=true}
+timestamp=[2025-10-15 18:05:43], mode=PLATFORM_GENERATION, duration=0:00:05.533, duration_ms=5533, data={name=mb_intro_top}
+timestamp=[2025-10-15 18:05:45], mode=BUILD, duration=0:00:01.434, duration_ms=1434, data={name=accumulator_demo, configuration=Debug, clean_build=false}
+timestamp=[2025-10-15 18:17:44], mode=PLATFORM_GENERATION, duration=0:00:04.699, duration_ms=4699, data={name=mb_intro_top}
+timestamp=[2025-10-15 18:17:44], mode=BUILD, duration=0:00:00.258, duration_ms=258, data={name=accumulator_demo, configuration=Debug, clean_build=true}
+timestamp=[2025-10-15 18:18:02], mode=PLATFORM_GENERATION, duration=0:00:08.649, duration_ms=8649, data={name=mb_intro_top}
+timestamp=[2025-10-15 18:18:05], mode=BUILD, duration=0:00:02.132, duration_ms=2132, data={name=accumulator_demo, configuration=Debug, clean_build=false}
+timestamp=[2025-10-15 18:44:35], mode=PLATFORM_GENERATION, duration=0:00:04.485, duration_ms=4485, data={name=mb_intro_top}
+timestamp=[2025-10-15 18:44:35], mode=BUILD, duration=0:00:00.299, duration_ms=299, data={name=accumulator_demo, configuration=Debug, clean_build=true}
+timestamp=[2025-10-15 18:44:54], mode=PLATFORM_GENERATION, duration=0:00:09.085, duration_ms=9085, data={name=mb_intro_top}
+timestamp=[2025-10-15 18:44:57], mode=BUILD, duration=0:00:02.305, duration_ms=2305, data={name=accumulator_demo, configuration=Debug, clean_build=false}
+timestamp=[2025-10-15 18:44:58], mode=BUILD, duration=0:00:00.287, duration_ms=287, data={name=accumulator_demo_system, configuration=Debug, clean_build=false}
+timestamp=[2025-10-15 18:50:22], mode=BUILD, duration=0:00:01.337, duration_ms=1337, data={name=accumulator_demo, configuration=Debug, clean_build=false}
+timestamp=[2025-10-15 18:53:46], mode=BUILD, duration=0:00:01.360, duration_ms=1360, data={name=accumulator_demo, configuration=Debug, clean_build=false}
+timestamp=[2025-10-15 18:54:37], mode=BUILD, duration=0:00:01.323, duration_ms=1323, data={name=accumulator_demo, configuration=Debug, clean_build=false}

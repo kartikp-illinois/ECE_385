@@ -1,21 +1,0 @@
-2025-10-14T12:36:14.945825100255-12:36:14 **** Incremental Build of configuration Debug for project mb_blink ****
-000-make all 
-000-'Building file: ../src/mb_blink.c'
-000-'Invoking: MicroBlaze gcc compiler'
-000-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/mb_blink.o" -IC:/Users/karti/Documents/ECE_385/Vitis/mb_intro_top/export/mb_intro_top/sw/mb_intro_top/standalone_microblaze_0/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/mb_blink.d" -MT"src/mb_blink.o" -o "src/mb_blink.o" "../src/mb_blink.c"
-000-'Finished building: ../src/mb_blink.c'
-000-' '
-000-'Building target: mb_blink.elf'
-000-'Invoking: MicroBlaze gcc linker'
-000-mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/karti/Documents/ECE_385/Vitis/mb_intro_top/export/mb_intro_top/sw/mb_intro_top/standalone_microblaze_0/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mb_blink.elf"  ./src/mb_blink.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-000-'Finished building target: mb_blink.elf'
-000-' '
-000-'Invoking: MicroBlaze Print Size'
-000-mb-size mb_blink.elf  |tee "mb_blink.elf.size"
-000-   text	   data	    bss	    dec	    hex	filename
-000-  19224	   1364	   3172	  23760	   5cd0	mb_blink.elf
-000-'Finished building: mb_blink.elf.size'
-000-' '
-00255-
-12:36:15 Build Finished (took 733ms)
-
