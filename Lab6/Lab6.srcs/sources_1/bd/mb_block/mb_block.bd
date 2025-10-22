@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x5A487DC86677CAF8",
+      "boundary_crc": "0x32B97EE810029C22",
       "device": "xc7s50csga324-1",
       "gen_directory": "../../../../Lab6.gen/sources_1/bd/mb_block",
       "name": "mb_block",
@@ -27,32 +27,22 @@
         "m02_couplers": {},
         "m03_couplers": {},
         "m04_couplers": {},
-        "m05_couplers": {}
+        "m05_couplers": {},
+        "m06_couplers": {}
       },
       "microblaze_0_axi_intc": "",
       "mdm_1": "",
       "clk_wiz_1": "",
       "rst_clk_wiz_1_100M": "",
-      "axi_gpio_0": "",
       "axi_uartlite_0": "",
-      "axi_gpio_1": "",
-      "axi_gpio_2": "",
-      "axi_gpio_3": ""
+      "gpio_usb_rst": "",
+      "gpio_usb_int": "",
+      "gpio_usb_keycode": "",
+      "timer_usb_axi": "",
+      "spi_usb": "",
+      "xlconcat_0": ""
     },
     "interface_ports": {
-      "gpio_rtl_0": {
-        "mode": "Master",
-        "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
-        "vlnv": "xilinx.com:interface:gpio_rtl:1.0",
-        "port_maps": {
-          "TRI_O": {
-            "physical_name": "gpio_rtl_0_tri_o",
-            "direction": "O",
-            "left": "15",
-            "right": "0"
-          }
-        }
-      },
       "uart_rtl_0": {
         "mode": "Master",
         "vlnv_bus_definition": "xilinx.com:interface:uart:1.0",
@@ -68,40 +58,53 @@
           }
         }
       },
-      "gpio_rtl_1": {
+      "gpio_usb_int": {
         "mode": "Master",
         "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
         "vlnv": "xilinx.com:interface:gpio_rtl:1.0",
         "port_maps": {
           "TRI_I": {
-            "physical_name": "gpio_rtl_1_tri_i",
-            "direction": "I",
-            "left": "15",
-            "right": "0"
-          }
-        }
-      },
-      "gpio_rtl_2": {
-        "mode": "Master",
-        "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
-        "vlnv": "xilinx.com:interface:gpio_rtl:1.0",
-        "port_maps": {
-          "TRI_I": {
-            "physical_name": "gpio_rtl_2_tri_i",
+            "physical_name": "gpio_usb_int_tri_i",
             "direction": "I",
             "left": "0",
             "right": "0"
           }
         }
       },
-      "gpio_rtl_3": {
+      "gpio_usb_keycode_0": {
         "mode": "Master",
         "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
         "vlnv": "xilinx.com:interface:gpio_rtl:1.0",
         "port_maps": {
-          "TRI_I": {
-            "physical_name": "gpio_rtl_3_tri_i",
-            "direction": "I",
+          "TRI_O": {
+            "physical_name": "gpio_usb_keycode_0_tri_o",
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "gpio_usb_keycode_1": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
+        "vlnv": "xilinx.com:interface:gpio_rtl:1.0",
+        "port_maps": {
+          "TRI_O": {
+            "physical_name": "gpio_usb_keycode_1_tri_o",
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "gpio_usb_rst": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
+        "vlnv": "xilinx.com:interface:gpio_rtl:1.0",
+        "port_maps": {
+          "TRI_O": {
+            "physical_name": "gpio_usb_rst_tri_o",
+            "direction": "O",
             "left": "0",
             "right": "0"
           }
@@ -146,13 +149,27 @@
             "value": "ACTIVE_LOW"
           }
         }
+      },
+      "usb_spi_mosi": {
+        "direction": "O"
+      },
+      "usb_spi_sclk": {
+        "direction": "O"
+      },
+      "usb_spi_ss": {
+        "direction": "O",
+        "left": "0",
+        "right": "0"
+      },
+      "usb_spi_miso": {
+        "direction": "I"
       }
     },
     "components": {
       "microblaze_0": {
         "vlnv": "xilinx.com:ip:microblaze:11.0",
-        "xci_name": "mb_block_microblaze_0_2",
-        "xci_path": "ip\\mb_block_microblaze_0_2\\mb_block_microblaze_0_2.xci",
+        "xci_name": "mb_block_microblaze_0_0",
+        "xci_path": "ip\\mb_block_microblaze_0_0\\mb_block_microblaze_0_0.xci",
         "inst_hier_path": "microblaze_0",
         "parameters": {
           "C_DEBUG_ENABLED": {
@@ -252,8 +269,8 @@
         "components": {
           "dlmb_v10": {
             "vlnv": "xilinx.com:ip:lmb_v10:3.0",
-            "xci_name": "mb_block_dlmb_v10_2",
-            "xci_path": "ip\\mb_block_dlmb_v10_2\\mb_block_dlmb_v10_2.xci",
+            "xci_name": "mb_block_dlmb_v10_0",
+            "xci_path": "ip\\mb_block_dlmb_v10_0\\mb_block_dlmb_v10_0.xci",
             "inst_hier_path": "microblaze_0_local_memory/dlmb_v10",
             "interface_ports": {
               "LMB_M": {
@@ -267,8 +284,8 @@
           },
           "ilmb_v10": {
             "vlnv": "xilinx.com:ip:lmb_v10:3.0",
-            "xci_name": "mb_block_ilmb_v10_2",
-            "xci_path": "ip\\mb_block_ilmb_v10_2\\mb_block_ilmb_v10_2.xci",
+            "xci_name": "mb_block_ilmb_v10_0",
+            "xci_path": "ip\\mb_block_ilmb_v10_0\\mb_block_ilmb_v10_0.xci",
             "inst_hier_path": "microblaze_0_local_memory/ilmb_v10",
             "interface_ports": {
               "LMB_M": {
@@ -282,8 +299,8 @@
           },
           "dlmb_bram_if_cntlr": {
             "vlnv": "xilinx.com:ip:lmb_bram_if_cntlr:4.0",
-            "xci_name": "mb_block_dlmb_bram_if_cntlr_2",
-            "xci_path": "ip\\mb_block_dlmb_bram_if_cntlr_2\\mb_block_dlmb_bram_if_cntlr_2.xci",
+            "xci_name": "mb_block_dlmb_bram_if_cntlr_0",
+            "xci_path": "ip\\mb_block_dlmb_bram_if_cntlr_0\\mb_block_dlmb_bram_if_cntlr_0.xci",
             "inst_hier_path": "microblaze_0_local_memory/dlmb_bram_if_cntlr",
             "parameters": {
               "C_ECC": {
@@ -303,8 +320,8 @@
           },
           "ilmb_bram_if_cntlr": {
             "vlnv": "xilinx.com:ip:lmb_bram_if_cntlr:4.0",
-            "xci_name": "mb_block_ilmb_bram_if_cntlr_2",
-            "xci_path": "ip\\mb_block_ilmb_bram_if_cntlr_2\\mb_block_ilmb_bram_if_cntlr_2.xci",
+            "xci_name": "mb_block_ilmb_bram_if_cntlr_0",
+            "xci_path": "ip\\mb_block_ilmb_bram_if_cntlr_0\\mb_block_ilmb_bram_if_cntlr_0.xci",
             "inst_hier_path": "microblaze_0_local_memory/ilmb_bram_if_cntlr",
             "parameters": {
               "C_ECC": {
@@ -314,8 +331,8 @@
           },
           "lmb_bram": {
             "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
-            "xci_name": "mb_block_lmb_bram_2",
-            "xci_path": "ip\\mb_block_lmb_bram_2\\mb_block_lmb_bram_2.xci",
+            "xci_name": "mb_block_lmb_bram_0",
+            "xci_path": "ip\\mb_block_lmb_bram_0\\mb_block_lmb_bram_0.xci",
             "inst_hier_path": "microblaze_0_local_memory/lmb_bram",
             "parameters": {
               "Memory_Type": {
@@ -388,12 +405,12 @@
       },
       "microblaze_0_axi_periph": {
         "vlnv": "xilinx.com:ip:axi_interconnect:2.1",
-        "xci_path": "ip\\mb_block_microblaze_0_axi_periph_2\\mb_block_microblaze_0_axi_periph_2.xci",
+        "xci_path": "ip\\mb_block_microblaze_0_axi_periph_0\\mb_block_microblaze_0_axi_periph_0.xci",
         "inst_hier_path": "microblaze_0_axi_periph",
-        "xci_name": "mb_block_microblaze_0_axi_periph_2",
+        "xci_name": "mb_block_microblaze_0_axi_periph_0",
         "parameters": {
           "NUM_MI": {
-            "value": "6"
+            "value": "7"
           }
         },
         "interface_ports": {
@@ -428,6 +445,11 @@
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
           },
           "M05_AXI": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
+          },
+          "M06_AXI": {
             "mode": "Master",
             "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
@@ -558,17 +580,33 @@
           "M05_ARESETN": {
             "type": "rst",
             "direction": "I"
+          },
+          "M06_ACLK": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_BUSIF": {
+                "value": "M06_AXI"
+              },
+              "ASSOCIATED_RESET": {
+                "value": "M06_ARESETN"
+              }
+            }
+          },
+          "M06_ARESETN": {
+            "type": "rst",
+            "direction": "I"
           }
         },
         "components": {
           "xbar": {
             "vlnv": "xilinx.com:ip:axi_crossbar:2.1",
-            "xci_name": "mb_block_xbar_2",
-            "xci_path": "ip\\mb_block_xbar_2\\mb_block_xbar_2.xci",
+            "xci_name": "mb_block_xbar_0",
+            "xci_path": "ip\\mb_block_xbar_0\\mb_block_xbar_0.xci",
             "inst_hier_path": "microblaze_0_axi_periph/xbar",
             "parameters": {
               "NUM_MI": {
-                "value": "6"
+                "value": "7"
               },
               "NUM_SI": {
                 "value": "1"
@@ -587,7 +625,8 @@
                   "M02_AXI",
                   "M03_AXI",
                   "M04_AXI",
-                  "M05_AXI"
+                  "M05_AXI",
+                  "M06_AXI"
                 ]
               }
             }
@@ -983,6 +1022,62 @@
                 ]
               }
             }
+          },
+          "m06_couplers": {
+            "interface_ports": {
+              "M_AXI": {
+                "mode": "Master",
+                "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+                "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
+              },
+              "S_AXI": {
+                "mode": "Slave",
+                "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+                "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
+              }
+            },
+            "ports": {
+              "M_ACLK": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "ASSOCIATED_BUSIF": {
+                    "value": "M_AXI"
+                  },
+                  "ASSOCIATED_RESET": {
+                    "value": "M_ARESETN"
+                  }
+                }
+              },
+              "M_ARESETN": {
+                "type": "rst",
+                "direction": "I"
+              },
+              "S_ACLK": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "ASSOCIATED_BUSIF": {
+                    "value": "S_AXI"
+                  },
+                  "ASSOCIATED_RESET": {
+                    "value": "S_ARESETN"
+                  }
+                }
+              },
+              "S_ARESETN": {
+                "type": "rst",
+                "direction": "I"
+              }
+            },
+            "interface_nets": {
+              "m06_couplers_to_m06_couplers": {
+                "interface_ports": [
+                  "S_AXI",
+                  "M_AXI"
+                ]
+              }
+            }
           }
         },
         "interface_nets": {
@@ -1020,6 +1115,12 @@
             "interface_ports": [
               "M05_AXI",
               "m05_couplers/M_AXI"
+            ]
+          },
+          "m06_couplers_to_microblaze_0_axi_periph": {
+            "interface_ports": [
+              "M06_AXI",
+              "m06_couplers/M_AXI"
             ]
           },
           "microblaze_0_axi_periph_to_s00_couplers": {
@@ -1069,6 +1170,12 @@
               "xbar/M05_AXI",
               "m05_couplers/S_AXI"
             ]
+          },
+          "xbar_to_m06_couplers": {
+            "interface_ports": [
+              "xbar/M06_AXI",
+              "m06_couplers/S_AXI"
+            ]
           }
         },
         "nets": {
@@ -1084,12 +1191,14 @@
               "m03_couplers/M_ACLK",
               "m04_couplers/M_ACLK",
               "m05_couplers/M_ACLK",
+              "m06_couplers/M_ACLK",
               "m00_couplers/S_ACLK",
               "m01_couplers/S_ACLK",
               "m02_couplers/S_ACLK",
               "m03_couplers/S_ACLK",
               "m04_couplers/S_ACLK",
-              "m05_couplers/S_ACLK"
+              "m05_couplers/S_ACLK",
+              "m06_couplers/S_ACLK"
             ]
           },
           "microblaze_0_axi_periph_ARESETN_net": {
@@ -1104,20 +1213,22 @@
               "m03_couplers/M_ARESETN",
               "m04_couplers/M_ARESETN",
               "m05_couplers/M_ARESETN",
+              "m06_couplers/M_ARESETN",
               "m00_couplers/S_ARESETN",
               "m01_couplers/S_ARESETN",
               "m02_couplers/S_ARESETN",
               "m03_couplers/S_ARESETN",
               "m04_couplers/S_ARESETN",
-              "m05_couplers/S_ARESETN"
+              "m05_couplers/S_ARESETN",
+              "m06_couplers/S_ARESETN"
             ]
           }
         }
       },
       "microblaze_0_axi_intc": {
         "vlnv": "xilinx.com:ip:axi_intc:4.1",
-        "xci_name": "mb_block_microblaze_0_axi_intc_2",
-        "xci_path": "ip\\mb_block_microblaze_0_axi_intc_2\\mb_block_microblaze_0_axi_intc_2.xci",
+        "xci_name": "mb_block_microblaze_0_axi_intc_0",
+        "xci_path": "ip\\mb_block_microblaze_0_axi_intc_0\\mb_block_microblaze_0_axi_intc_0.xci",
         "inst_hier_path": "microblaze_0_axi_intc",
         "parameters": {
           "C_HAS_FAST": {
@@ -1127,14 +1238,14 @@
       },
       "mdm_1": {
         "vlnv": "xilinx.com:ip:mdm:3.2",
-        "xci_name": "mb_block_mdm_1_2",
-        "xci_path": "ip\\mb_block_mdm_1_2\\mb_block_mdm_1_2.xci",
+        "xci_name": "mb_block_mdm_1_0",
+        "xci_path": "ip\\mb_block_mdm_1_0\\mb_block_mdm_1_0.xci",
         "inst_hier_path": "mdm_1"
       },
       "clk_wiz_1": {
         "vlnv": "xilinx.com:ip:clk_wiz:6.0",
-        "xci_name": "mb_block_clk_wiz_1_2",
-        "xci_path": "ip\\mb_block_clk_wiz_1_2\\mb_block_clk_wiz_1_2.xci",
+        "xci_name": "mb_block_clk_wiz_1_0",
+        "xci_path": "ip\\mb_block_clk_wiz_1_0\\mb_block_clk_wiz_1_0.xci",
         "inst_hier_path": "clk_wiz_1",
         "parameters": {
           "PRIM_SOURCE": {
@@ -1144,28 +1255,14 @@
       },
       "rst_clk_wiz_1_100M": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
-        "xci_name": "mb_block_rst_clk_wiz_1_100M_2",
-        "xci_path": "ip\\mb_block_rst_clk_wiz_1_100M_2\\mb_block_rst_clk_wiz_1_100M_2.xci",
+        "xci_name": "mb_block_rst_clk_wiz_1_100M_0",
+        "xci_path": "ip\\mb_block_rst_clk_wiz_1_100M_0\\mb_block_rst_clk_wiz_1_100M_0.xci",
         "inst_hier_path": "rst_clk_wiz_1_100M"
-      },
-      "axi_gpio_0": {
-        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
-        "xci_name": "mb_block_axi_gpio_0_2",
-        "xci_path": "ip\\mb_block_axi_gpio_0_2\\mb_block_axi_gpio_0_2.xci",
-        "inst_hier_path": "axi_gpio_0",
-        "parameters": {
-          "C_ALL_OUTPUTS": {
-            "value": "1"
-          },
-          "C_GPIO_WIDTH": {
-            "value": "16"
-          }
-        }
       },
       "axi_uartlite_0": {
         "vlnv": "xilinx.com:ip:axi_uartlite:2.0",
-        "xci_name": "mb_block_axi_uartlite_0_2",
-        "xci_path": "ip\\mb_block_axi_uartlite_0_2\\mb_block_axi_uartlite_0_2.xci",
+        "xci_name": "mb_block_axi_uartlite_0_0",
+        "xci_path": "ip\\mb_block_axi_uartlite_0_0\\mb_block_axi_uartlite_0_0.xci",
         "inst_hier_path": "axi_uartlite_0",
         "parameters": {
           "C_BAUDRATE": {
@@ -1173,27 +1270,13 @@
           }
         }
       },
-      "axi_gpio_1": {
+      "gpio_usb_rst": {
         "vlnv": "xilinx.com:ip:axi_gpio:2.0",
-        "xci_name": "mb_block_axi_gpio_1_2",
-        "xci_path": "ip\\mb_block_axi_gpio_1_2\\mb_block_axi_gpio_1_2.xci",
-        "inst_hier_path": "axi_gpio_1",
+        "xci_name": "mb_block_axi_gpio_0_0",
+        "xci_path": "ip\\mb_block_axi_gpio_0_0\\mb_block_axi_gpio_0_0.xci",
+        "inst_hier_path": "gpio_usb_rst",
         "parameters": {
-          "C_ALL_INPUTS": {
-            "value": "1"
-          },
-          "C_GPIO_WIDTH": {
-            "value": "16"
-          }
-        }
-      },
-      "axi_gpio_2": {
-        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
-        "xci_name": "mb_block_axi_gpio_2_2",
-        "xci_path": "ip\\mb_block_axi_gpio_2_2\\mb_block_axi_gpio_2_2.xci",
-        "inst_hier_path": "axi_gpio_2",
-        "parameters": {
-          "C_ALL_INPUTS": {
+          "C_ALL_OUTPUTS": {
             "value": "1"
           },
           "C_GPIO_WIDTH": {
@@ -1201,50 +1284,109 @@
           }
         }
       },
-      "axi_gpio_3": {
+      "gpio_usb_int": {
         "vlnv": "xilinx.com:ip:axi_gpio:2.0",
-        "xci_name": "mb_block_axi_gpio_3_2",
-        "xci_path": "ip\\mb_block_axi_gpio_3_2\\mb_block_axi_gpio_3_2.xci",
-        "inst_hier_path": "axi_gpio_3",
+        "xci_name": "mb_block_axi_gpio_0_1",
+        "xci_path": "ip\\mb_block_axi_gpio_0_1\\mb_block_axi_gpio_0_1.xci",
+        "inst_hier_path": "gpio_usb_int",
         "parameters": {
           "C_ALL_INPUTS": {
             "value": "1"
           },
           "C_GPIO_WIDTH": {
             "value": "1"
+          },
+          "C_INTERRUPT_PRESENT": {
+            "value": "1"
+          }
+        }
+      },
+      "gpio_usb_keycode": {
+        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
+        "xci_name": "mb_block_axi_gpio_0_2",
+        "xci_path": "ip\\mb_block_axi_gpio_0_2\\mb_block_axi_gpio_0_2.xci",
+        "inst_hier_path": "gpio_usb_keycode",
+        "parameters": {
+          "C_ALL_INPUTS": {
+            "value": "0"
+          },
+          "C_ALL_OUTPUTS": {
+            "value": "1"
+          },
+          "C_ALL_OUTPUTS_2": {
+            "value": "1"
+          },
+          "C_IS_DUAL": {
+            "value": "1"
+          }
+        }
+      },
+      "timer_usb_axi": {
+        "vlnv": "xilinx.com:ip:axi_timer:2.0",
+        "xci_name": "mb_block_axi_timer_0_0",
+        "xci_path": "ip\\mb_block_axi_timer_0_0\\mb_block_axi_timer_0_0.xci",
+        "inst_hier_path": "timer_usb_axi",
+        "parameters": {
+          "enable_timer2": {
+            "value": "0"
+          }
+        }
+      },
+      "spi_usb": {
+        "vlnv": "xilinx.com:ip:axi_quad_spi:3.2",
+        "xci_name": "mb_block_axi_quad_spi_0_0",
+        "xci_path": "ip\\mb_block_axi_quad_spi_0_0\\mb_block_axi_quad_spi_0_0.xci",
+        "inst_hier_path": "spi_usb",
+        "parameters": {
+          "C_SCK_RATIO": {
+            "value": "4"
+          },
+          "C_USE_STARTUP": {
+            "value": "0"
+          }
+        }
+      },
+      "xlconcat_0": {
+        "vlnv": "xilinx.com:ip:xlconcat:2.1",
+        "xci_name": "mb_block_xlconcat_0_0",
+        "xci_path": "ip\\mb_block_xlconcat_0_0\\mb_block_xlconcat_0_0.xci",
+        "inst_hier_path": "xlconcat_0",
+        "parameters": {
+          "NUM_PORTS": {
+            "value": "4"
           }
         }
       }
     },
     "interface_nets": {
-      "axi_gpio_0_GPIO": {
-        "interface_ports": [
-          "gpio_rtl_0",
-          "axi_gpio_0/GPIO"
-        ]
-      },
-      "axi_gpio_1_GPIO": {
-        "interface_ports": [
-          "gpio_rtl_1",
-          "axi_gpio_1/GPIO"
-        ]
-      },
-      "axi_gpio_2_GPIO": {
-        "interface_ports": [
-          "gpio_rtl_2",
-          "axi_gpio_2/GPIO"
-        ]
-      },
-      "axi_gpio_3_GPIO": {
-        "interface_ports": [
-          "gpio_rtl_3",
-          "axi_gpio_3/GPIO"
-        ]
-      },
       "axi_uartlite_0_UART": {
         "interface_ports": [
           "uart_rtl_0",
           "axi_uartlite_0/UART"
+        ]
+      },
+      "gpio_usb_int_GPIO": {
+        "interface_ports": [
+          "gpio_usb_int",
+          "gpio_usb_int/GPIO"
+        ]
+      },
+      "gpio_usb_keycode_GPIO": {
+        "interface_ports": [
+          "gpio_usb_keycode_0",
+          "gpio_usb_keycode/GPIO"
+        ]
+      },
+      "gpio_usb_keycode_GPIO2": {
+        "interface_ports": [
+          "gpio_usb_keycode_1",
+          "gpio_usb_keycode/GPIO2"
+        ]
+      },
+      "gpio_usb_rst_GPIO": {
+        "interface_ports": [
+          "gpio_usb_rst",
+          "gpio_usb_rst/GPIO"
         ]
       },
       "microblaze_0_axi_dp": {
@@ -1256,7 +1398,7 @@
       "microblaze_0_axi_periph_M01_AXI": {
         "interface_ports": [
           "microblaze_0_axi_periph/M01_AXI",
-          "axi_gpio_0/S_AXI"
+          "gpio_usb_int/S_AXI"
         ]
       },
       "microblaze_0_axi_periph_M02_AXI": {
@@ -1268,19 +1410,25 @@
       "microblaze_0_axi_periph_M03_AXI": {
         "interface_ports": [
           "microblaze_0_axi_periph/M03_AXI",
-          "axi_gpio_1/S_AXI"
+          "gpio_usb_keycode/S_AXI"
         ]
       },
       "microblaze_0_axi_periph_M04_AXI": {
         "interface_ports": [
           "microblaze_0_axi_periph/M04_AXI",
-          "axi_gpio_2/S_AXI"
+          "gpio_usb_rst/S_AXI"
         ]
       },
       "microblaze_0_axi_periph_M05_AXI": {
         "interface_ports": [
           "microblaze_0_axi_periph/M05_AXI",
-          "axi_gpio_3/S_AXI"
+          "spi_usb/AXI_LITE"
+        ]
+      },
+      "microblaze_0_axi_periph_M06_AXI": {
+        "interface_ports": [
+          "microblaze_0_axi_periph/M06_AXI",
+          "timer_usb_axi/S_AXI"
         ]
       },
       "microblaze_0_debug": {
@@ -1318,7 +1466,7 @@
       "axi_uartlite_0_interrupt": {
         "ports": [
           "axi_uartlite_0/interrupt",
-          "microblaze_0_axi_intc/intr"
+          "xlconcat_0/In3"
         ]
       },
       "clk_100MHz_1": {
@@ -1331,6 +1479,12 @@
         "ports": [
           "clk_wiz_1/locked",
           "rst_clk_wiz_1_100M/dcm_locked"
+        ]
+      },
+      "gpio_usb_int_ip2intc_irpt": {
+        "ports": [
+          "gpio_usb_int/ip2intc_irpt",
+          "xlconcat_0/In2"
         ]
       },
       "mdm_1_debug_sys_rst": {
@@ -1351,16 +1505,19 @@
           "microblaze_0_axi_intc/processor_clk",
           "microblaze_0_local_memory/LMB_Clk",
           "rst_clk_wiz_1_100M/slowest_sync_clk",
-          "axi_gpio_0/s_axi_aclk",
           "microblaze_0_axi_periph/M01_ACLK",
           "axi_uartlite_0/s_axi_aclk",
           "microblaze_0_axi_periph/M02_ACLK",
-          "axi_gpio_1/s_axi_aclk",
+          "gpio_usb_int/s_axi_aclk",
+          "gpio_usb_keycode/s_axi_aclk",
           "microblaze_0_axi_periph/M03_ACLK",
-          "axi_gpio_2/s_axi_aclk",
+          "gpio_usb_rst/s_axi_aclk",
           "microblaze_0_axi_periph/M04_ACLK",
-          "axi_gpio_3/s_axi_aclk",
-          "microblaze_0_axi_periph/M05_ACLK"
+          "spi_usb/s_axi_aclk",
+          "microblaze_0_axi_periph/M05_ACLK",
+          "timer_usb_axi/s_axi_aclk",
+          "microblaze_0_axi_periph/M06_ACLK",
+          "spi_usb/ext_spi_clk"
         ]
       },
       "reset_rtl_0_1": {
@@ -1389,16 +1546,60 @@
           "microblaze_0_axi_periph/S00_ARESETN",
           "microblaze_0_axi_periph/M00_ARESETN",
           "microblaze_0_axi_intc/s_axi_aresetn",
-          "axi_gpio_0/s_axi_aresetn",
           "microblaze_0_axi_periph/M01_ARESETN",
           "axi_uartlite_0/s_axi_aresetn",
           "microblaze_0_axi_periph/M02_ARESETN",
-          "axi_gpio_1/s_axi_aresetn",
+          "gpio_usb_int/s_axi_aresetn",
+          "gpio_usb_keycode/s_axi_aresetn",
           "microblaze_0_axi_periph/M03_ARESETN",
-          "axi_gpio_2/s_axi_aresetn",
+          "gpio_usb_rst/s_axi_aresetn",
           "microblaze_0_axi_periph/M04_ARESETN",
-          "axi_gpio_3/s_axi_aresetn",
-          "microblaze_0_axi_periph/M05_ARESETN"
+          "spi_usb/s_axi_aresetn",
+          "microblaze_0_axi_periph/M05_ARESETN",
+          "timer_usb_axi/s_axi_aresetn",
+          "microblaze_0_axi_periph/M06_ARESETN"
+        ]
+      },
+      "spi_usb_io0_o": {
+        "ports": [
+          "spi_usb/io0_o",
+          "usb_spi_mosi"
+        ]
+      },
+      "spi_usb_ip2intc_irpt": {
+        "ports": [
+          "spi_usb/ip2intc_irpt",
+          "xlconcat_0/In0"
+        ]
+      },
+      "spi_usb_sck_o": {
+        "ports": [
+          "spi_usb/sck_o",
+          "usb_spi_sclk"
+        ]
+      },
+      "spi_usb_ss_o": {
+        "ports": [
+          "spi_usb/ss_o",
+          "usb_spi_ss"
+        ]
+      },
+      "timer_usb_axi_interrupt": {
+        "ports": [
+          "timer_usb_axi/interrupt",
+          "xlconcat_0/In1"
+        ]
+      },
+      "usb_spi_miso_1": {
+        "ports": [
+          "usb_spi_miso",
+          "spi_usb/io1_i"
+        ]
+      },
+      "xlconcat_0_dout": {
+        "ports": [
+          "xlconcat_0/dout",
+          "microblaze_0_axi_intc/intr"
         ]
       }
     },
@@ -1407,26 +1608,6 @@
         "address_spaces": {
           "Data": {
             "segments": {
-              "SEG_axi_gpio_0_Reg": {
-                "address_block": "/axi_gpio_0/S_AXI/Reg",
-                "offset": "0x40000000",
-                "range": "64K"
-              },
-              "SEG_axi_gpio_1_Reg": {
-                "address_block": "/axi_gpio_1/S_AXI/Reg",
-                "offset": "0x40010000",
-                "range": "64K"
-              },
-              "SEG_axi_gpio_2_Reg": {
-                "address_block": "/axi_gpio_2/S_AXI/Reg",
-                "offset": "0x40020000",
-                "range": "64K"
-              },
-              "SEG_axi_gpio_3_Reg": {
-                "address_block": "/axi_gpio_3/S_AXI/Reg",
-                "offset": "0x40030000",
-                "range": "64K"
-              },
               "SEG_axi_uartlite_0_Reg": {
                 "address_block": "/axi_uartlite_0/S_AXI/Reg",
                 "offset": "0x40600000",
@@ -1438,9 +1619,35 @@
                 "range": "32K",
                 "offset_high_param": "C_HIGHADDR"
               },
+              "SEG_gpio_usb_int_Reg": {
+                "address_block": "/gpio_usb_int/S_AXI/Reg",
+                "offset": "0x40000000",
+                "range": "64K"
+              },
+              "SEG_gpio_usb_keycode_Reg": {
+                "address_block": "/gpio_usb_keycode/S_AXI/Reg",
+                "offset": "0x40010000",
+                "range": "64K"
+              },
+              "SEG_gpio_usb_rst_Reg": {
+                "address_block": "/gpio_usb_rst/S_AXI/Reg",
+                "offset": "0x40020000",
+                "range": "64K"
+              },
               "SEG_microblaze_0_axi_intc_Reg": {
                 "address_block": "/microblaze_0_axi_intc/S_AXI/Reg",
                 "offset": "0x41200000",
+                "range": "64K"
+              },
+              "SEG_spi_usb_Reg": {
+                "address_block": "/spi_usb/AXI_LITE/Reg",
+                "offset": "0x44A00000",
+                "range": "64K",
+                "offset_high_param": "C_HIGHADDR"
+              },
+              "SEG_timer_usb_axi_Reg": {
+                "address_block": "/timer_usb_axi/S_AXI/Reg",
+                "offset": "0x41C00000",
                 "range": "64K"
               }
             }
